@@ -150,7 +150,7 @@
     (ends-with? word "ь") (if (special-case-feminine? word)
                             (get-plural-special-case-feminine word)
                             (str (subs word 0 (- (count word) 1)) "i"))
-    (ends-with? word "a") (str (subs word 0 (- (count word) 1)) "и")
+    (ends-with? word "а") (str (subs word 0 (- (count word) 1)) "и")
     (ends-with? word "я") (if (= (get-letter-before-last word) "і")
                             (str (subs word 0 (- (count word) 1)) "ї")
                             (str (subs word 0 (- (count word) 1)) "i"))))
