@@ -11,6 +11,8 @@ I am learning ukrainian and clojure, so it is nice to mix some grammar with LISP
 
 ## Usage
 
+Visit https://ukrainian-cases.herokuapp.com/ to try it.  
+
 For now there are 2 main functions, both for nominative.  
 You can use it in Java calling the wrapper, or direct in clojure:  
 
