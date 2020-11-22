@@ -1,8 +1,8 @@
 # Ukrainian Cases
 
 The ukrainian language has 7 cases, and it mostly works changing the ending of the word
-in nominative. 
-The idea of this program is that sending a ukrainian word, you get back all the 
+in nominative.  
+The idea of this program is that sending an ukrainian word, you get back all the 
 different cases, including plural.
 
 ## Why?
@@ -17,8 +17,8 @@ You can use it in Java calling the wrapper, or direct in clojure:
 get-possible-genders-nominative (clojure)
 getGendersNominative (java)
 
-To use clojure follow these tutorials:
-https://clojure.org/guides/getting_started
+To use clojure follow these tutorials:  
+https://clojure.org/guides/getting_started  
 https://leiningen.org
 
 ## Examples
