@@ -162,14 +162,14 @@
   [word gender]
   (condp = gender
     gender-masculine (cond
-                       (ends-with? word "ь" ) "If the words means an object, it is masculine"
-                       (ends-with? word "о" ) "If the words belongs to a proper name or has masculine meaning, it is masculine")
+                       (ends-with? word "ь" ) "If the words means an object"
+                       (ends-with? word "о" ) "If the words belongs to a proper name or has masculine meaning")
     gender-neuter (cond
-                    (ends-with? word "о" ) "If the words don't belongs to a proper name and has no masculine meaning, it is neuter"
-                    (ends-with? word "я" ) "Is neuter because it has double same consonant before last letter")
+                    (ends-with? word "о" ) "If the words don't belongs to a proper name and has no masculine meaning"
+                    (ends-with? word "я" ) "Has double same consonant before last letter")
     gender-feminine (cond
-                      (ends-with? word "ь" ) "If the words means a feeling, it is feminine"
-                      (zero-ending-exception? word) "This is an exception for zero ending rule, it is feminine"
+                      (ends-with? word "ь" ) "If the words means a feeling"
+                      (zero-ending-exception? word) "Exception for zero ending rule"
                       (plural-exception-feminine? word) "The plural of this word is an exception")))
 
 (defn get-plural-message
