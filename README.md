@@ -11,9 +11,15 @@ I am learning ukrainian and clojure, so it is nice to mix some grammar with LISP
 
 ## Usage
 
-Visit https://ukrainian-cases.herokuapp.com/ to try it.  
+Visit https://ukrainiannouns.herokuapp.com/ to try it.
 
-For now there are 2 main functions, both for nominative.  
+## API
+For now there are 2 main functions, you can try the API here:  
+https://ukrainian-cases.herokuapp.com/  
+
+* https://ukrainian-cases.herokuapp.com/nouns/<ukrainian_noun>/gender
+* https://ukrainian-cases.herokuapp.com/nouns/<ukrainian_noun>/nominative  
+
 You can use it in Java calling the wrapper, or direct in clojure:  
 
 get-possible-genders-nominative (clojure)
