@@ -163,14 +163,17 @@
   (condp = gender
     gender-masculine (cond
                        (ends-with? word "ь" ) "If the words means an object"
-                       (ends-with? word "о" ) "If the words belongs to a proper name or has masculine meaning")
+                       (ends-with? word "о" ) "If the words belongs to a proper name or has masculine meaning"
+                       :else "")
     gender-neuter (cond
                     (ends-with? word "о" ) "If the words don't belongs to a proper name and has no masculine meaning"
-                    (ends-with? word "я" ) "Has double same consonant before last letter")
+                    (ends-with? word "я" ) "Has double same consonant before last letter"
+                    :else "")
     gender-feminine (cond
                       (ends-with? word "ь" ) "If the words means a feeling"
                       (zero-ending-exception? word) "Exception for zero ending rule"
-                      (plural-exception-feminine? word) "The plural of this word is an exception")))
+                      (plural-exception-feminine? word) "The plural of this word is an exception"
+                      :else "")))
 
 (defn get-plural-message
   [word gender]
@@ -248,13 +251,13 @@
                                                           :Error "This word has one or more not ukrainian characters")
     (word-without-singular? (normalize! word)) (struct-map result
                                                  :Result (create-nominative nil nil (normalize! word) (get-plural-message word nil))
-                                                 :Error nil)
+                                                 :Error "")
     (word-without-plural? (normalize! word)) (struct-map result
                                                :Result (create-nominative nil (normalize! word) nil (get-plural-message word nil))
-                                               :Error nil)
+                                               :Error "")
     (possible-singular? (normalize! word)) (struct-map result
                                              :Result (get-possible-plurals (normalize! word))
-                                             :Error nil)
+                                             :Error "")
     (possible-plural? (normalize! word)) (struct-map result
                                            :Result []
                                            :Error "This word is a possible plural")
@@ -271,7 +274,7 @@
                                                 :Error "This word has one or more not ukrainian characters")
     (possible-singular? (normalize! word)) (struct-map result
                                 :Result (get-possible-genders (normalize! word))
-                                :Error nil)
+                                :Error "")
     (possible-plural? (normalize! word)) (struct-map result
                               :Result []
                               :Error "This word is a possible plural")
