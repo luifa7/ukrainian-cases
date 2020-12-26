@@ -8,7 +8,7 @@
                  [ring/ring-defaults "0.3.2"]
                  [ring/ring-core "1.7.1"]
                  [ring/ring-jetty-adapter "1.7.1"]
-                 [org.clojure/data.json "1.0.0"]]
+                 [cheshire "5.10.0"]]
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler ukrainian-cases.handler/app}
   :main ukrainian-cases.core

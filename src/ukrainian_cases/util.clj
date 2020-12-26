@@ -1,6 +1,6 @@
 (ns ukrainian-cases.util
   (:require [clojure.string :refer [join lower-case]]
-            [clojure.data.json :as json])
+            [cheshire.core :refer :all])
   (:import (java.util HashMap)))
 
 (defn get-last-letter
@@ -67,4 +67,4 @@
 
 (defn to-json
   [clojure-map]
-  (json/write-str clojure-map))
+  (generate-string clojure-map {:escape-non-ascii false}))
