@@ -20,7 +20,6 @@
   :ring {:handler ukrainian-cases.handler/app}
   :main ukrainian-cases.core
   :aot [ukrainian-cases.core]
-  :target-path "target/%s"
   :uberjar-name "ukrainian-cases-standalone.jar"
   :profiles {:production {:env {:production true}
                           :dependencies [[javax.servlet/servlet-api "2.5"]
