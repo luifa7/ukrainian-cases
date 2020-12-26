@@ -15,15 +15,14 @@ Visit https://ukrainiannouns.herokuapp.com/ to try it.
 
 ## API
 For now there are 2 main functions, you can try the API here:  
-https://ukrainian-cases.herokuapp.com/  
+https://ukrainian-cases-api.herokuapp.com  
 
-* https://ukrainian-cases.herokuapp.com/nouns/<ukrainian_noun>/gender
-* https://ukrainian-cases.herokuapp.com/nouns/<ukrainian_noun>/nominative  
+* https://ukrainian-cases-api.herokuapp.com/nouns/<ukrainian_noun>/gender
+* https://ukrainian-cases-api.herokuapp.com/nouns/<ukrainian_noun>/nominative  
 
-You can use it in Java calling the wrapper, or direct in clojure:  
+The API is also build with clojure using Compojure  
+https://github.com/weavejester/compojure  
 
-get-possible-genders-nominative (clojure)
-getGendersNominative (java)
 
 To use clojure follow these tutorials:  
 https://clojure.org/guides/getting_started  
