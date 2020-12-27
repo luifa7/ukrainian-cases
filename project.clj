@@ -15,7 +15,8 @@
                  [cheshire "5.10.0"]]
   :min-lein-version "2.0.0"
   :plugins [[lein-ring "0.12.5"]
-            [environ/environ.lein "0.3.1"]]
+            [environ/environ.lein "0.3.1"]
+            [lein-cloverage "1.1.2"]]
   :hooks [environ.leiningen.hooks]
   :ring {:handler ukrainian-cases.handler/app}
   :main ukrainian-cases.core

@@ -21,7 +21,10 @@ https://ukrainian-cases-api.herokuapp.com
 * https://ukrainian-cases-api.herokuapp.com/nouns/<ukrainian_noun>/nominative  
 
 The API is also build with clojure using Compojure  
-https://github.com/weavejester/compojure  
+https://github.com/weavejester/compojure    
+
+For test coverage I use Cloverage  
+https://github.com/cloverage/cloverage  
 
 
 To use clojure follow these tutorials:  

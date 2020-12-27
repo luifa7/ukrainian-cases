@@ -25,42 +25,42 @@
   (testing "FIXME, I fail."
     (is (= (get-possible-genders-nominative "Музей") (struct-map result
                                                        :Result [{:Gender "masculine"
-                                                                 :Message nil}]
-                                                       :Error nil)))
+                                                                 :Message ""}]
+                                                       :Error "")))
     ))
 
 (deftest get-gender-neuter-test
   (testing "FIXME, I fail."
     (is (= (get-possible-genders-nominative "Море") (struct-map result
                                                       :Result [{:Gender "neuter"
-                                                                :Message nil}]
-                                                      :Error nil)))
+                                                                :Message ""}]
+                                                      :Error "")))
     ))
 
 (deftest get-gender-feminine-test
   (testing "FIXME, I fail."
     (is (= (get-possible-genders-nominative "Крaїнa") (struct-map result
                                                         :Result [{:Gender "feminine"
-                                                                  :Message nil}]
-                                                        :Error nil)))
+                                                                  :Message ""}]
+                                                        :Error "")))
     ))
 
 (deftest get-gender-multiple-possibilities-test
   (testing "FIXME, I fail."
     (is (= (get-possible-genders-nominative "кіно") (struct-map result
                                                       :Result [{:Gender "masculine"
-                                                                :Message "If the words belongs to a proper name or has masculine meaning, it is masculine"}
+                                                                :Message "If the words belongs to a proper name or has masculine meaning"}
                                                                {:Gender "neuter"
-                                                                :Message "If the words don't belongs to a proper name and has no masculine meaning, it is neuter"}]
-                                                      :Error nil)))
+                                                                :Message "If the words don't belongs to a proper name and has no masculine meaning"}]
+                                                      :Error "")))
     ))
 
 (deftest get-gender-no-plural-test
   (testing "FIXME, I fail."
     (is (= (get-possible-genders-nominative "кафе") (struct-map result
                                                       :Result [{:Gender "neuter"
-                                                                :Message nil}]
-                                                      :Error nil)))
+                                                                :Message ""}]
+                                                      :Error "")))
     ))
 
 (deftest get-gender-no-singular-test
